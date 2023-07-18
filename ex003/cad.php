@@ -18,6 +18,11 @@
       $nome = $_GET["nome"] ?? "sem nome";
       $snome = $_GET["snome"] ?? "sem sobrenome";
       $aniv = $_GET["aniv"] ?? "sem aniversario";
+
+      $nome = $_GET["nome"];
+      $snome = $_GET["snome"];
+      $aniv = $_GET["aniv"];
+
       echo "Olá, que bom conhecer você $nome $snome!!, hoje ainda é dia " . date("d/M/Y"). " mas dia $aniv teremos uma surpresinha para você  \u{2764}";
       
     ?>
