@@ -24,8 +24,8 @@
       $aniv = $_GET["aniv"];
 
       echo "Olá, que bom conhecer você $nome $snome!!, hoje ainda é dia " . date("d/M/Y"). " mas dia $aniv teremos uma surpresinha para você  \u{2764}";
-      
     ?>
+    <p><a href="javascript:history.go(-1)">Voltar a página anterior</a></p>
   </main>
 </body>
 
