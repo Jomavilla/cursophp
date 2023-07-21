@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio 9</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <?php
-    $nota1 = $_GET['valor1'];
-    $nota2 = $_GET['valor2'];
-    $peso1 = $_GET['peso1'];
-    $peso2 = $_GET['peso2'];
+    $nota1 = $_GET['valor1'] ?? 0;
+    $nota2 = $_GET['valor2'] ?? 0;
+    $peso1 = $_GET['peso1'] ?? 1;
+    $peso2 = $_GET['peso2'] ?? 1;
     $media_simples = ($nota1 + $nota2) / 2;
     $media_ponderada = (($nota1 * $peso1) + ($nota2 * $peso2)) / ($peso1 + $peso2);
   ?>
@@ -37,6 +39,7 @@
     echo "<li>A <strong>Média Aritmética Ponderada</strong> com pesos $peso1 e $peso2 é igual a ". number_format($media_ponderada, 2, ",", ".") . "</li></ul>";
         ?>
   </section>
-  
+
 </body>
+
 </html>

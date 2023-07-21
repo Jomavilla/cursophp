@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio 8</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <?php
-    $num = $_GET['num'];
+    $num = $_GET['num'] ?? 0;
     $r_quadrada = sqrt($num);
     $r_cubica = $num ** (1/3); 
 
@@ -30,6 +32,7 @@
     echo "<li> A sau raíz cúbica é <strong>" . number_format($r_cubica, 3, ",", ".") . "</strong></li></ul>";
     ?>
   </section>
-  
+
 </body>
+
 </html>
