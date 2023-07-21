@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio 10</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <?php
     date_default_timezone_set('America/Sao_Paulo');
-    $ano_nasc = $_GET['ano-nasc'];
-    $ano_request = $_GET['ano-request'];
+    $ano_nasc = $_GET['ano-nasc'] ?? 0;
+    $ano_request = $_GET['ano-request'] ?? 0;
     $idade_atual = date('Y') - $ano_nasc;
     $idade = $ano_request - $ano_nasc;  
   ?>
@@ -32,6 +34,7 @@
       echo "<br>Quem nasceu em $ano_nasc vai ter <strong>$idade anos</strong> em $ano_request";
     ?>
   </section>
-  
+
 </body>
+
 </html>
