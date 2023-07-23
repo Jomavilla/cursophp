@@ -18,7 +18,7 @@
             $valor = $_GET["valor"];
             $cotacao = $valor / 5.22;
             echo "Seus R$" . number_format($valor, 2, ",", ".") . " equivalem a US$ " . number_format($cotacao, 2 , ",", ".");
-            echo nl2br("\n\n\n\n\nCotação fixa de R$ 5,22 informada diretamente no código");
+            echo ("<br>Cotação fixa de R$ 5,22 informada diretamente no código");
 ?>
     <br>
     <br>

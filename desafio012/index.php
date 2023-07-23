@@ -12,10 +12,11 @@
 
   <?php 
     $seg = $_GET['seg'] ?? 0;
-    $min = intdiv($seg, 60);
-    $hour = intdiv($min, 60);
-    $days = intdiv($hour, 24);
-    $sem = intdiv($days, 7);
+    $res_seg = (((($seg % 604800) % 86400) % 3600) % 60);
+    $min = intdiv((($seg % 604800) % 86400) % 3600, 60);
+    $hour = intdiv(($seg % 604800) % 86400, 3600);
+    $days = intdiv($seg % 604800, 86400);
+    $sem = intdiv($seg, 604800);
     
   ?>
 
@@ -32,7 +33,7 @@
     <h1>Totalizando tudo</h1>
     <?php 
       echo "Analisando o valor que você digitou, <b>$seg segundos</b> equivalem a um total de:";
-      echo "<ul><li>$sem semanas</li><li>$days dias</li><li>$hour horas</li><li>$min minutos</li><li>$seg segundos</li></ul>";
+      echo "<ul><li>$sem semanas</li><li>$days dias</li><li>$hour horas</li><li>$min minutos</li><li>$res_seg segundos</li></ul>";
       
       
     ?>
