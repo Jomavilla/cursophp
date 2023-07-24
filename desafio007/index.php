@@ -13,8 +13,8 @@
     $valor = $_GET['valor'] ?? 1380;
     $s_minimo = 1380;
     $salario_minimo = intdiv($valor, $s_minimo);
-    //$s_restante = $valor  - $s_minimo * $salario_minimo;
-    $s_restante = $valor % $s_minimo;
+    $s_restante = $valor  - $s_minimo * $salario_minimo;
+    //$s_restante = $valor % $s_minimo;
      
   ?>
   <main>
